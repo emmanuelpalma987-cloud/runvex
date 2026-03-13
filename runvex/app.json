@@ -1,0 +1,42 @@
+{
+  "expo": {
+    "name": "RUNVEX",
+    "slug": "runvex",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.runvex.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "RUNVEX necesita tu ubicación para registrar rutas.",
+        "NSLocationAlwaysUsageDescription": "RUNVEX necesita tu ubicación en segundo plano.",
+        "NSMotionUsageDescription": "RUNVEX usa el acelerómetro para contar pasos."
+      }
+    },
+    "android": {
+      "package": "com.runvex.app",
+      "permissions": [
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACTIVITY_RECOGNITION"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "RUNVEX necesita tu ubicación para registrar rutas."
+        }
+      ]
+    ],
+    "scheme": "runvex",
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
